@@ -8,11 +8,11 @@
   "enableNativeAPI": true,
   "nativeAllowList": [
     "app.*",
-    "filesystem.*"
+    "filesystem.readDirectory"
   ],
   "modes": {
     "window": {
-      "title": "x-penses-dskt",
+      "title": "X Penses",
       "width": 800,
       "height": 500,
       "minWidth": 400,
