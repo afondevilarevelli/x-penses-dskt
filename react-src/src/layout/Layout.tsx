@@ -90,7 +90,7 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function Layout({ children }: TProps) {
-  const [opened, setOpened] = React.useState(false);
+  const [opened, setOpened] = React.useState(true);
 
   const handleDrawerOpen = () => {
     setOpened(true);
