@@ -1,13 +1,10 @@
-import React from 'react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Index from './pages/Index';
+import { Route, Routes } from "react-router-dom";
+import Index from "./pages/Index";
 
-const router = createBrowserRouter([
-    {path: "/", element: <Index />},
-]);
-  
-export default function Routes() {
+export default function Routing() {
   return (
-    <RouterProvider router={router} />
-  )
+    <Routes>
+      <Route path="/" element={<Index />} />
+    </Routes>
+  );
 }
