@@ -8,6 +8,8 @@ import "@fontsource/roboto/700.css";
 import Routing from "./Routing";
 import Layout from "./layout/Layout";
 import { BrowserRouter } from "react-router-dom";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { THEME } from "./theme";
 
 function App() {
   // Log current directory or error after component is mounted
@@ -24,9 +26,12 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Layout>
-        <Routing />
-      </Layout>
+      <ThemeProvider theme={THEME}>
+        <CssBaseline />
+        <Layout>
+          <Routing />
+        </Layout>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
