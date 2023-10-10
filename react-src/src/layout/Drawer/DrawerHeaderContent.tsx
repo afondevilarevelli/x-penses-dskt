@@ -5,5 +5,5 @@ type TProps = {
 };
 
 export default function DrawerHeaderContent({ opened }: TProps) {
-  return opened ? <Logo style={{ height: 125 }} /> : <></>;
+  return opened ? <Logo style={{ height: 120 }} /> : <></>;
 }

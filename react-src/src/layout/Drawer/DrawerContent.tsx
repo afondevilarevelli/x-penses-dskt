@@ -34,7 +34,7 @@ export default function DrawerContent({ opened }: TProps) {
   }
 
   return (
-    <List>
+    <List sx={{ paddingTop: 0 }}>
       {DRAWER_ITEMS.map((item, index) => (
         <ListItem
           key={index}
