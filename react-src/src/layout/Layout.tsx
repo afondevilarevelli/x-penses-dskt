@@ -119,9 +119,6 @@ export default function Layout({ children }: TProps) {
               {opened ? <ChevronLeft /> : <MenuIcon />}
             </IconButton>
           </Tooltip>
-          <Typography variant="h6" noWrap component="div">
-            X Penses
-          </Typography>
 
           <Box
             sx={{
