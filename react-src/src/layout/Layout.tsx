@@ -12,6 +12,7 @@ import DrawerHeaderContent from "./Drawer/DrawerHeaderContent";
 import { ChevronLeft } from "@mui/icons-material";
 import { Tooltip } from "@mui/material";
 import DrawerContent from "./Drawer/DrawerContent";
+import ColorModeSwitch from "../components/common/ColorModeSwitch";
 
 type TProps = {
   children: any;
@@ -57,6 +58,7 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })<AppBarProps>(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
+  flexGrow: 1,
   transition: theme.transitions.create(["width", "margin"], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -117,10 +119,17 @@ export default function Layout({ children }: TProps) {
               {opened ? <ChevronLeft /> : <MenuIcon />}
             </IconButton>
           </Tooltip>
-
           <Typography variant="h6" noWrap component="div">
             X Penses
           </Typography>
+
+          <Box
+            sx={{
+              marginLeft: "auto",
+            }}
+          >
+            <ColorModeSwitch />
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={opened}>

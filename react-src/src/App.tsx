@@ -8,8 +8,7 @@ import "@fontsource/roboto/700.css";
 import Routing from "./Routing";
 import Layout from "./layout/Layout";
 import { BrowserRouter } from "react-router-dom";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { THEME } from "./theme";
+import ToggleColorMode from "./layout/ToogleColorMode";
 
 function App() {
   // Log current directory or error after component is mounted
@@ -26,12 +25,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ThemeProvider theme={THEME}>
-        <CssBaseline />
+      <ToggleColorMode>
         <Layout>
           <Routing />
         </Layout>
-      </ThemeProvider>
+      </ToggleColorMode>
     </BrowserRouter>
   );
 }
